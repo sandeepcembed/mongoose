@@ -1,0 +1,1266 @@
+******************************************************************************
+                  TI ARM Linker PC v20.2.7                     
+******************************************************************************
+>> Linked Thu Jul 25 19:01:13 2024
+
+OUTPUT FILE NAME:   <Mongoose_ethernet_6.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00015a09
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00100000  0001ec9e  000e1362  R  X
+  SRAM                  20000000   00040000  00004ad1  0003b52f  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    0001eca0   0001eca0    r-x
+  00000000    00000000    00000208   00000208    r-- .intvecs
+  00000208    00000208    00015d4e   00015d4e    r-x .text
+  00015f58    00015f58    00008b70   00008b70    r-- .const
+  0001eac8    0001eac8    000001d8   000001d8    r-- .cinit
+20000000    20000000    00004ad8   00000000    rw-
+  20000000    20000000    00003295   00000000    rw- .bss
+  20003298    20003298    00001400   00000000    rw- .stack
+  20004698    20004698    0000042c   00000000    rw- .data
+  20004ac8    20004ac8    00000010   00000000    rw- .sysmem
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    00000208     
+                  00000000    00000208     tm4c129encpdt_startup_ccs.obj (.intvecs)
+
+.text      0    00000208    00015d4e     
+                  00000208    00011b84     mongoose.obj (.text)
+                  00011d8c    00000b14     rtsv7M4_T_le_v4SPD16_eabi.lib : _scanfi.c.obj (.text:__TI_scanfi)
+                  000128a0    00000604     main.obj (.text)
+                  00012ea4    00000460     rtsv7M4_T_le_v4SPD16_eabi.lib : strtod.c.obj (.text:strtod)
+                  00013304    00000200     driverlib.lib : sysctl.obj (.text:SysCtlClockFreqSet)
+                  00013504    000001dc     rtsv7M4_T_le_v4SPD16_eabi.lib : strtoll.c.obj (.text:strtoll)
+                  000136e0    000001b6                                   : fd_add_t2.asm.obj (.text)
+                  00013896    00000002                                   : _lock.c.obj (.text:_nop)
+                  00013898    00000180                                   : fwrite.c.obj (.text:fwrite)
+                  00013a18    0000015c                                   : strtoull.c.obj (.text:strtoull)
+                  00013b74    00000136                                   : fd_div_t2.asm.obj (.text)
+                  00013caa    00000132     driverlib.lib : gpio.obj (.text:GPIOPadConfigSet)
+                  00013ddc    00000130     rtsv7M4_T_le_v4SPD16_eabi.lib : strtol.c.obj (.text:strtol)
+                  00013f0c    00000110                                   : fopen.c.obj (.text:_openfile)
+                  0001401c    00000110                                   : s_scalbn.c.obj (.text:scalbn)
+                  0001412c    00000110                                   : strtoul.c.obj (.text:strtoul)
+                  0001423c    00000100                                   : memory.c.obj (.text:aligned_alloc)
+                  0001433c    000000fc                                   : fd_mul_t2.asm.obj (.text)
+                  00014438    000000f8                                   : fread.c.obj (.text:fread)
+                  00014530    000000e4                                   : memory.c.obj (.text:free)
+                  00014614    000000dc                                   : setvbuf.c.obj (.text:setvbuf)
+                  000146f0    000000bc                                   : open.c.obj (.text:open)
+                  000147ac    000000a0     packed_fs.obj (.text)
+                  0001484c    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : _bufread.c.obj (.text:__TI_buff_read)
+                  000148e8    0000009c                                   : fopen.c.obj (.text:fopen)
+                  00014984    0000009c                                   : memcpy_t2.asm.obj (.text)
+                  00014a20    00000096                                   : ull_div_t2.asm.obj (.text)
+                  00014ab6    00000002                                   : div0.asm.obj (.text)
+                  00014ab8    0000008c                                   : fputc.c.obj (.text:fputc)
+                  00014b44    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdcmple)
+                  00014bca    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdrcmple)
+                  00014c50    0000007a                                   : memset_t2.asm.obj (.text)
+                  00014cca    00000002     --HOLE-- [fill = 0]
+                  00014ccc    00000074                                   : fclose.c.obj (.text:__TI_closefile)
+                  00014d40    00000070                                   : fd_toll_t2.asm.obj (.text)
+                  00014db0    00000070                                   : memory.c.obj (.text:split)
+                  00014e20    0000006e                                   : fd_tos_t2.asm.obj (.text)
+                  00014e8e    0000006e                                   : ll_div_t2.asm.obj (.text)
+                  00014efc    0000006c                                   : hostrename.c.obj (.text:HOSTrename)
+                  00014f68    00000068                                   : hostlseek.c.obj (.text:HOSTlseek)
+                  00014fd0    00000068     driverlib.lib : interrupt.obj (.text:IntEnable)
+                  00015038    00000068     rtsv7M4_T_le_v4SPD16_eabi.lib : sscanf.c.obj (.text:_chkmbc)
+                  000150a0    00000068                                   : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00015108    00000064                                   : fseek.c.obj (.text:fseek)
+                  0001516c    00000064                                   : ftell.c.obj (.text:ftell)
+                  000151d0    00000062                                   : _io_perm.c.obj (.text:__TI_wrt_ok)
+                  00015232    00000002     --HOLE-- [fill = 0]
+                  00015234    00000060                                   : hostopen.c.obj (.text:HOSTopen)
+                  00015294    0000005c                                   : close.c.obj (.text:close)
+                  000152f0    00000058                                   : hostread.c.obj (.text:HOSTread)
+                  00015348    00000058                                   : hostwrite.c.obj (.text:HOSTwrite)
+                  000153a0    00000050     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralReset)
+                  000153f0    0000004c     rtsv7M4_T_le_v4SPD16_eabi.lib : fflush.c.obj (.text:__TI_doflush)
+                  0001543c    0000004c                                   : atoi.c.obj (.text:atoi)
+                  00015488    0000004a                                   : _io_perm.c.obj (.text:__TI_rd_ok)
+                  000154d2    00000002     --HOLE-- [fill = 0]
+                  000154d4    00000048     driverlib.lib : gpio.obj (.text:GPIOPinConfigure)
+                  0001551c    00000048                   : sysctl.obj (.text:_SysCtlFrequencyGet)
+                  00015564    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.c.obj (.text:exit)
+                  000155ac    00000048                                   : rename.c.obj (.text:rename)
+                  000155f4    00000048                                   : fd_toi_t2.asm.obj (.text)
+                  0001563c    00000046     driverlib.lib : uart.obj (.text:UARTConfigSetExpClk)
+                  00015682    00000002     --HOLE-- [fill = 0]
+                  00015684    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : hostclose.c.obj (.text:HOSTclose)
+                  000156c8    00000044                                   : hostunlink.c.obj (.text:HOSTunlink)
+                  0001570c    00000044                                   : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  00015750    00000044                                   : getdevice.c.obj (.text:getdevice)
+                  00015794    00000044                                   : fd_tou_t2.asm.obj (.text)
+                  000157d8    00000040                                   : ll_tofd_t2.asm.obj (.text)
+                  00015818    0000003a     driverlib.lib : emac.obj (.text:EMACIntEnable)
+                  00015852    00000002     --HOLE-- [fill = 0]
+                  00015854    00000038                   : sysctl.obj (.text:SysCtlPeripheralReady)
+                  0001588c    00000038     rtsv7M4_T_le_v4SPD16_eabi.lib : trgmsg.c.obj (.text:__TI_writemsg)
+                  000158c4    00000038                                   : memory.c.obj (.text:calloc)
+                  000158fc    00000038                                   : sscanf.c.obj (.text:sscanf)
+                  00015934    00000036                                   : strncpy.c.obj (.text:strncpy)
+                  0001596a    00000002     --HOLE-- [fill = 0]
+                  0001596c    00000034     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  000159a0    00000034     rtsv7M4_T_le_v4SPD16_eabi.lib : fopen.c.obj (.text:__TI_cleanup)
+                  000159d4    00000034                                   : trgmsg.c.obj (.text:__TI_readmsg)
+                  00015a08    00000034                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  00015a3c    00000034                                   : rand.c.obj (.text:rand)
+                  00015a70    00000034                                   : strstr.c.obj (.text:strstr)
+                  00015aa4    00000030                                   : getdevice.c.obj (.text:finddevice)
+                  00015ad4    0000002e                                   : i_tofd_t2.asm.obj (.text)
+                  00015b02    00000002     --HOLE-- [fill = 0]
+                  00015b04    0000002c                                   : fclose.c.obj (.text:fclose)
+                  00015b30    0000002c                                   : strncmp.c.obj (.text:strncmp)
+                  00015b5c    0000002c                                   : unlink.c.obj (.text:unlink)
+                  00015b88    0000002a     driverlib.lib : gpio.obj (.text:GPIODirModeSet)
+                  00015bb2    00000002     --HOLE-- [fill = 0]
+                  00015bb4    00000028     rtsv7M4_T_le_v4SPD16_eabi.lib : memory.c.obj (.text:free_list_insert)
+                  00015bdc    00000028                                   : lseek.c.obj (.text:lseek)
+                  00015c04    00000028                                   : memmov.c.obj (.text:memmove)
+                  00015c2c    00000028                                   : read.c.obj (.text:read)
+                  00015c54    00000028                                   : write.c.obj (.text:write)
+                  00015c7c    00000024                                   : memcmp.c.obj (.text:memcmp)
+                  00015ca0    00000024                                   : rand.c.obj (.text:srand)
+                  00015cc4    00000020     driverlib.lib : uart.obj (.text:UARTDisable)
+                  00015ce4    00000020                   : sysctl.obj (.text:_SysCtlMemTimingGet)
+                  00015d04    00000020     rtsv7M4_T_le_v4SPD16_eabi.lib : memchr.c.obj (.text:memchr)
+                  00015d24    00000020                                   : u_tofd_t2.asm.obj (.text)
+                  00015d44    0000001c                                   : memory.c.obj (.text:free_list_remove)
+                  00015d60    0000001a                                   : s_copysign.c.obj (.text:copysign)
+                  00015d7a    00000018     driverlib.lib : gpio.obj (.text:GPIOPinTypeGPIOOutput)
+                  00015d92    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : ll_mul_t2.asm.obj (.text)
+                  00015daa    00000018                                   : strcmp.c.obj (.text:strcmp)
+                  00015dc2    00000018                                   : strrchr.c.obj (.text:strrchr)
+                  00015dda    00000016     driverlib.lib : emac.obj (.text:EMACReset)
+                  00015df0    00000016                   : emac.obj (.text:EMACRxEnable)
+                  00015e06    00000016                   : emac.obj (.text:EMACTxEnable)
+                  00015e1c    00000016     rtsv7M4_T_le_v4SPD16_eabi.lib : strchr.c.obj (.text:strchr)
+                  00015e32    00000002     --HOLE-- [fill = 0]
+                  00015e34    00000014     driverlib.lib : flash.obj (.text:FlashUserGet)
+                  00015e48    00000014                   : uart.obj (.text:UARTEnable)
+                  00015e5c    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : strcpy.c.obj (.text:strcpy)
+                  00015e70    00000014                                   : strlen.c.obj (.text:strlen)
+                  00015e84    00000012     driverlib.lib : gpio.obj (.text:GPIOPinTypeEthernetLED)
+                  00015e96    00000012                   : gpio.obj (.text:GPIOPinTypeGPIOInput)
+                  00015ea8    00000012                   : gpio.obj (.text:GPIOPinTypeUART)
+                  00015eba    00000012                   : gpio.obj (.text:GPIOPinTypeUSBAnalog)
+                  00015ecc    00000012                   : gpio.obj (.text:GPIOPinTypeUSBDigital)
+                  00015ede    00000012     rtsv7M4_T_le_v4SPD16_eabi.lib : sscanf.c.obj (.text:_inpchar)
+                  00015ef0    0000000e                                   : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  00015efe    0000000c                                   : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
+                  00015f0a    00000002     --HOLE-- [fill = 0]
+                  00015f0c    0000000c                                   : fputc.c.obj (.text:putchar)
+                  00015f18    0000000c     tm4c129encpdt_startup_ccs.obj (.text)
+                  00015f24    0000000a     driverlib.lib : uart.obj (.text:UARTCharPut)
+                  00015f2e    00000002     --HOLE-- [fill = 0]
+                  00015f30    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.text:__aeabi_errno_addr)
+                  00015f38    00000008                                   : sscanf.c.obj (.text:_uninpchar)
+                  00015f40    00000008                                   : memory.c.obj (.text:malloc)
+                  00015f48    00000006     driverlib.lib : gpio.obj (.text:GPIOPinWrite)
+                  00015f4e    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  00015f52    00000004                                   : exit.c.obj (.text:abort:abort)
+
+.const     0    00015f58    00008b70     
+                  00015f58    00001f4f     packed_fs.obj (.const:.string:v2)
+                  00017ea7    00001dde     packed_fs.obj (.const:.string:v1)
+                  00019c85    00001639     packed_fs.obj (.const:.string:v6)
+                  0001b2be    00001212     packed_fs.obj (.const:.string:v5)
+                  0001c4d0    0000111c     packed_fs.obj (.const:.string:v3)
+                  0001d5ec    00000260     mongoose.obj (.const:.string)
+                  0001d84c    00000239     packed_fs.obj (.const:.string:v4)
+                  0001da85    00000003     mongoose.obj (.const:.string:$P$T44$45)
+                  0001da88    000001b0     driverlib.lib : sysctl.obj (.const:g_pppui32XTALtoVCO)
+                  0001dc38    000001a5     packed_fs.obj (.const:.string:v7)
+                  0001dddd    00000110     mongoose.obj (.const:$P$T24$25)
+                  0001deed    00000110     mongoose.obj (.const:$P$T33$34)
+                  0001dffd    00000101     rtsv7M4_T_le_v4SPD16_eabi.lib : ctype.c.obj (.const:.string:_ctypes_)
+                  0001e0fe    00000002     --HOLE-- [fill = 0]
+                  0001e100    00000100     mongoose.obj (.const:mg_sha256_k)
+                  0001e200    000000e4     packed_fs.obj (.const:.string:v8)
+                  0001e2e4    00000004     main.obj (.const:$P$T2$3)
+                  0001e2e8    000000c8     rtsv7M4_T_le_v4SPD16_eabi.lib : strtod.c.obj (.const:$O1$$)
+                  0001e3b0    000000c6     packed_fs.obj (.const:.string)
+                  0001e476    00000002     --HOLE-- [fill = 0]
+                  0001e478    00000090     driverlib.lib : gpio.obj (.const:g_pui32GPIOBaseAddrs)
+                  0001e508    00000090     packed_fs.obj (.const:packed_files)
+                  0001e598    00000080     main.obj (.const:$P$T3$4)
+                  0001e618    00000070     driverlib.lib : interrupt.obj (.const)
+                  0001e688    0000006c                   : sysctl.obj (.const:g_pui32Xtals)
+                  0001e6f4    00000040     mongoose.obj (.const:crclut$55)
+                  0001e734    00000036     mongoose.obj (.const:s_prop_map)
+                  0001e76a    00000002     --HOLE-- [fill = 0]
+                  0001e76c    00000030     driverlib.lib : sysctl.obj (.const:g_sXTALtoMEMTIM)
+                  0001e79c    00000027     mongoose.obj (.const:steps$54)
+                  0001e7c3    0000001b     mongoose.obj (.const:.string:$P$T26$27)
+                  0001e7de    0000001b     mongoose.obj (.const:.string:$P$T34$35)
+                  0001e7f9    00000018     mongoose.obj (.const:.string:$P$T60$63)
+                  0001e811    00000018     mongoose.obj (.const:.string:$P$T61$64)
+                  0001e829    00000014     mongoose.obj (.const:.string:$P$T12$13)
+                  0001e83d    00000014     mongoose.obj (.const:.string:$P$T25$26)
+                  0001e851    00000014     mongoose.obj (.const:.string:$P$T43$44)
+                  0001e865    00000013     mongoose.obj (.const:.string:$P$T27$28)
+                  0001e878    00000011     mongoose.obj (.const:.string:$P$T29$30)
+                  0001e889    00000003     --HOLE-- [fill = 0]
+                  0001e88c    00000010     rtsv7M4_T_le_v4SPD16_eabi.lib : _scanfi.c.obj (.const:$O1$$)
+                  0001e89c    00000010     mongoose.obj (.const:$P$T46$47)
+                  0001e8ac    00000010     mongoose.obj (.const:$P$T47$48)
+                  0001e8bc    00000010     mongoose.obj (.const:.string:$P$T14$15)
+                  0001e8cc    00000010     mongoose.obj (.const:.string:$P$T51$52)
+                  0001e8dc    0000000f     mongoose.obj (.const:.string:$P$T11$12)
+                  0001e8eb    0000000f     mongoose.obj (.const:.string:$P$T32$33)
+                  0001e8fa    0000000e     mongoose.obj (.const:.string:$P$T18$19)
+                  0001e908    0000000e     mongoose.obj (.const:.string:$P$T23$24)
+                  0001e916    0000000e     mongoose.obj (.const:.string:$P$T41$42)
+                  0001e924    0000000e     mongoose.obj (.const:.string:$P$T42$43)
+                  0001e932    0000000e     mongoose.obj (.const:.string:$P$T49$50)
+                  0001e940    0000000e     mongoose.obj (.const:.string:$P$T6$7)
+                  0001e94e    0000000d     mongoose.obj (.const:.string:$P$T0$1)
+                  0001e95b    0000000d     mongoose.obj (.const:.string:$P$T2$3)
+                  0001e968    0000000d     mongoose.obj (.const:.string:$P$T57$60)
+                  0001e975    0000000d     mongoose.obj (.const:.string:$P$T9$10)
+                  0001e982    0000000c     mongoose.obj (.const:.string:$P$T16$17)
+                  0001e98e    0000000c     mongoose.obj (.const:.string:$P$T21$22)
+                  0001e99a    0000000c     mongoose.obj (.const:.string:$P$T36$37)
+                  0001e9a6    0000000c     mongoose.obj (.const:.string:$P$T40$41)
+                  0001e9b2    0000000c     mongoose.obj (.const:.string:$P$T45$46)
+                  0001e9be    0000000c     mongoose.obj (.const:.string:$P$T55$58)
+                  0001e9ca    0000000b     mongoose.obj (.const:.string:$P$T19$20)
+                  0001e9d5    0000000b     mongoose.obj (.const:.string:$P$T53$56)
+                  0001e9e0    0000000b     mongoose.obj (.const:.string:$P$T56$59)
+                  0001e9eb    0000000a     mongoose.obj (.const:.string:$P$T20$21)
+                  0001e9f5    0000000a     mongoose.obj (.const:.string:$P$T38$39)
+                  0001e9ff    00000009     main.obj (.const:.string:$P$T0$1)
+                  0001ea08    00000009     mongoose.obj (.const:.string:$P$T22$23)
+                  0001ea11    00000009     mongoose.obj (.const:.string:$P$T3$4)
+                  0001ea1a    00000009     mongoose.obj (.const:.string:$P$T37$38)
+                  0001ea23    00000009     mongoose.obj (.const:.string:$P$T54$57)
+                  0001ea2c    00000008     mongoose.obj (.const:$P$T10$11)
+                  0001ea34    00000008     mongoose.obj (.const:$P$T4$5)
+                  0001ea3c    00000008     mongoose.obj (.const:$P$T52$53)
+                  0001ea44    00000008     mongoose.obj (.const:$P$T7$8)
+                  0001ea4c    00000008     mongoose.obj (.const:$P$T8$9)
+                  0001ea54    00000008     mongoose.obj (.const:.string:$P$T13$14)
+                  0001ea5c    00000008     mongoose.obj (.const:.string:$P$T15$16)
+                  0001ea64    00000008     mongoose.obj (.const:.string:$P$T17$18)
+                  0001ea6c    00000008     mongoose.obj (.const:.string:$P$T30$31)
+                  0001ea74    00000008     mongoose.obj (.const:.string:$P$T50$51)
+                  0001ea7c    00000008     driverlib.lib : sysctl.obj (.const)
+                  0001ea84    00000007     mongoose.obj (.const:.string:$P$T1$2)
+                  0001ea8b    00000007     mongoose.obj (.const:.string:$P$T31$32)
+                  0001ea92    00000007     mongoose.obj (.const:.string:$P$T35$36)
+                  0001ea99    00000007     mongoose.obj (.const:.string:$P$T5$6)
+                  0001eaa0    00000006     mongoose.obj (.const:.string:$P$T39$40)
+                  0001eaa6    00000006     mongoose.obj (.const:.string:broadcast)
+                  0001eaac    00000005     main.obj (.const:.string:$P$T1$2)
+                  0001eab1    00000004     mongoose.obj (.const:.string:$P$T28$29)
+                  0001eab5    00000004     mongoose.obj (.const:.string:$P$T48$49)
+                  0001eab9    00000004     mongoose.obj (.const:.string:$P$T58$61)
+                  0001eabd    00000004     mongoose.obj (.const:.string:$P$T59$62)
+                  0001eac1    00000003     --HOLE-- [fill = 0]
+                  0001eac4    00000004     mongoose.obj (.const:a24)
+
+.cinit     0    0001eac8    000001d8     
+                  0001eac8    000001b4     (.cinit..data.load) [load image, compression = lzss]
+                  0001ec7c    0000000c     (__TI_handler_table)
+                  0001ec88    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  0001ec90    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.bss       0    20000000    00003295     UNINITIALIZED
+                  20000000    00001810     mongoose.obj (.bss:s_rxbuf)
+                  20001810    00001810     mongoose.obj (.bss:s_txbuf)
+                  20003020    00000120     rtsv7M4_T_le_v4SPD16_eabi.lib : trgmsg.c.obj (.bss:_CIOBUF_)
+                  20003140    000000a0     (.common:__TI_tmpnams)
+                  200031e0    00000040     mongoose.obj (.bss:s_rxdesc)
+                  20003220    00000040     mongoose.obj (.bss:s_txdesc)
+                  20003260    0000000c     mongoose.obj (.bss)
+                  2000326c    00000004     (.common:g_ui32SysClock)
+                  20003270    00000008     main.obj (.bss)
+                  20003278    00000008     (.common:parmbuf)
+                  20003280    00000008     (.common:pui8MACAddr)
+                  20003288    00000004     (.common:ui32SysClock)
+                  2000328c    00000004     (.common:ui32User0)
+                  20003290    00000004     (.common:ui32User1)
+                  20003294    00000001     (.common:ui8PHYAddr)
+
+.stack     0    20003298    00001400     UNINITIALIZED
+                  20003298    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  2000329c    000013fc     --HOLE--
+
+.data      0    20004698    0000042c     UNINITIALIZED
+                  20004698    000001e8     mongoose.obj (.data:s_known_types)
+                  20004880    000000f0     rtsv7M4_T_le_v4SPD16_eabi.lib : defs.c.obj (.data:_ftable)
+                  20004970    00000078                                   : host_device.c.obj (.data:_device)
+                  200049e8    00000050                                   : host_device.c.obj (.data:_stream)
+                  20004a38    00000028     mongoose.obj (.data:mg_fs_posix)
+                  20004a60    00000018     mongoose.obj (.data)
+                  20004a78    00000010     mongoose.obj (.data:mg_tcpip_driver_tm4c)
+                  20004a88    00000010     rtsv7M4_T_le_v4SPD16_eabi.lib : defs.c.obj (.data)
+                  20004a98    0000000c                                   : exit.c.obj (.data:$O1$$)
+                  20004aa4    00000008                                   : _lock.c.obj (.data:$O1$$)
+                  20004aac    00000008                                   : memory.c.obj (.data:$O1$$)
+                  20004ab4    00000004                                   : errno.c.obj (.data)
+                  20004ab8    00000004                                   : fopen.c.obj (.data)
+                  20004abc    00000004                                   : open.c.obj (.data)
+                  20004ac0    00000004                                   : rand.c.obj (.data)
+
+.sysmem    0    20004ac8    00000010     UNINITIALIZED
+                  20004ac8    00000010     rtsv7M4_T_le_v4SPD16_eabi.lib : memory.c.obj (.sysmem)
+
+__llvm_prf_cnts 
+*          0    20000000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                          code    ro data   rw data
+       ------                          ----    -------   -------
+    .\
+       main.obj                        1540    146       33     
+       tm4c129encpdt_startup_ccs.obj   12      520       0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          1552    666       33     
+                                                                
+    .\mongoose\
+       mongoose.obj                    72580   2297      13028  
+       packed_fs.obj                   160     31916     0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          72740   34213     13028  
+                                                                
+    ../driverlib.lib
+       sysctl.obj                      804     596       0      
+       gpio.obj                        540     144       0      
+       interrupt.obj                   104     112       0      
+       uart.obj                        132     0         0      
+       emac.obj                        124     0         0      
+       flash.obj                       20      0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          1724    852       0      
+                                                                
+    C:\ti\ccs1271\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       _scanfi.c.obj                   2836    16        0      
+       strtod.c.obj                    1120    200       0      
+       memory.c.obj                    728     0         8      
+       fopen.c.obj                     480     0         4      
+       strtoll.c.obj                   476     0         0      
+       fd_add_t2.asm.obj               438     0         0      
+       defs.c.obj                      0       0         416    
+       trgmsg.c.obj                    108     0         288    
+       fwrite.c.obj                    384     0         0      
+       strtoull.c.obj                  348     0         0      
+       fd_div_t2.asm.obj               310     0         0      
+       strtol.c.obj                    304     0         0      
+       s_scalbn.c.obj                  272     0         0      
+       strtoul.c.obj                   272     0         0      
+       fd_cmp_t2.asm.obj               268     0         0      
+       ctype.c.obj                     0       257       0      
+       fd_mul_t2.asm.obj               252     0         0      
+       fread.c.obj                     248     0         0      
+       setvbuf.c.obj                   220     0         0      
+       host_device.c.obj               0       0         200    
+       open.c.obj                      188     0         4      
+       sscanf.c.obj                    186     0         0      
+       _io_perm.c.obj                  172     0         0      
+       fclose.c.obj                    160     0         0      
+       _bufread.c.obj                  156     0         0      
+       memcpy_t2.asm.obj               156     0         0      
+       fputc.c.obj                     152     0         0      
+       ull_div_t2.asm.obj              150     0         0      
+       memset_t2.asm.obj               122     0         0      
+       getdevice.c.obj                 116     0         0      
+       fd_toll_t2.asm.obj              112     0         0      
+       fd_tos_t2.asm.obj               110     0         0      
+       ll_div_t2.asm.obj               110     0         0      
+       hostrename.c.obj                108     0         0      
+       copy_decompress_lzss.c.obj      104     0         0      
+       hostlseek.c.obj                 104     0         0      
+       hostopen.c.obj                  96      0         8      
+       fseek.c.obj                     100     0         0      
+       ftell.c.obj                     100     0         0      
+       close.c.obj                     92      0         0      
+       rand.c.obj                      88      0         4      
+       exit.c.obj                      76      0         12     
+       hostread.c.obj                  88      0         0      
+       hostwrite.c.obj                 88      0         0      
+       atoi.c.obj                      76      0         0      
+       fflush.c.obj                    76      0         0      
+       fd_toi_t2.asm.obj               72      0         0      
+       rename.c.obj                    72      0         0      
+       autoinit.c.obj                  68      0         0      
+       fd_tou_t2.asm.obj               68      0         0      
+       hostclose.c.obj                 68      0         0      
+       hostunlink.c.obj                68      0         0      
+       ll_tofd_t2.asm.obj              64      0         0      
+       strncpy.c.obj                   54      0         0      
+       boot_cortex_m.c.obj             52      0         0      
+       strstr.c.obj                    52      0         0      
+       i_tofd_t2.asm.obj               46      0         0      
+       strncmp.c.obj                   44      0         0      
+       unlink.c.obj                    44      0         0      
+       lseek.c.obj                     40      0         0      
+       memmov.c.obj                    40      0         0      
+       read.c.obj                      40      0         0      
+       write.c.obj                     40      0         0      
+       memcmp.c.obj                    36      0         0      
+       memchr.c.obj                    32      0         0      
+       u_tofd_t2.asm.obj               32      0         0      
+       s_copysign.c.obj                26      0         0      
+       ll_mul_t2.asm.obj               24      0         0      
+       strcmp.c.obj                    24      0         0      
+       strrchr.c.obj                   24      0         0      
+       strchr.c.obj                    22      0         0      
+       strcpy.c.obj                    20      0         0      
+       strlen.c.obj                    20      0         0      
+       copy_decompress_none.c.obj      14      0         0      
+       copy_zero_init.c.obj            12      0         0      
+       errno.c.obj                     8       0         4      
+       _lock.c.obj                     2       0         8      
+       pre_init.c.obj                  4       0         0      
+       div0.asm.obj                    2       0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          13384   473       956    
+                                                                
+       Heap:                           0       0         16     
+       Stack:                          0       0         5120   
+       Linker Generated:               0       472       0      
+    +--+-------------------------------+-------+---------+---------+
+       Grand Total:                    89400   36676     19153  
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0001ec90 records: 2, size/record: 8, table size: 16
+	.data: load addr=0001eac8, load size=000001b4 bytes, run addr=20004698, run size=0000042c bytes, compression=lzss
+	.bss: load addr=0001ec88, load size=00000008 bytes, run addr=20000000, run size=00003295 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0001ec7c records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                           
+-------   ----                           
+00015f53  C$$EXIT                        
+000158bb  C$$IO$$                        
+00011c45  EMAC0_IRQHandler               
+00015819  EMACIntEnable                  
+00015ddb  EMACReset                      
+00015df1  EMACRxEnable                   
+00015e07  EMACTxEnable                   
+00015e35  FlashUserGet                   
+00015b89  GPIODirModeSet                 
+00013cab  GPIOPadConfigSet               
+000154d5  GPIOPinConfigure               
+00015e85  GPIOPinTypeEthernetLED         
+00015e97  GPIOPinTypeGPIOInput           
+00015d7b  GPIOPinTypeGPIOOutput          
+00015ea9  GPIOPinTypeUART                
+00015ebb  GPIOPinTypeUSBAnalog           
+00015ecd  GPIOPinTypeUSBDigital          
+00015f49  GPIOPinWrite                   
+00015685  HOSTclose                      
+00014f69  HOSTlseek                      
+00015235  HOSTopen                       
+000152f1  HOSTread                       
+00014efd  HOSTrename                     
+000156c9  HOSTunlink                     
+00015349  HOSTwrite                      
+00014fd1  IntEnable                      
+000129c3  PinoutSet                      
+00015f19  ResetISR                       
+00013305  SysCtlClockFreqSet             
+0001596d  SysCtlPeripheralEnable         
+00015855  SysCtlPeripheralReady          
+000153a1  SysCtlPeripheralReset          
+000129a5  SysTick_Handler                
+00015f25  UARTCharPut                    
+0001563d  UARTConfigSetExpClk            
+00015cc5  UARTDisable                    
+00015e49  UARTEnable                     
+00012931  UARTSend                       
+20003020  __CIOBUF_                      
+20004698  __STACK_END                    
+00001400  __STACK_SIZE                   
+20003498  __STACK_TOP                    
+00000010  __SYSMEM_SIZE                  
+0001ec90  __TI_CINIT_Base                
+0001eca0  __TI_CINIT_Limit               
+0001ec7c  __TI_Handler_Table_Base        
+0001ec88  __TI_Handler_Table_Limit       
+0001570d  __TI_auto_init_nobinit_nopinit 
+0001484d  __TI_buff_read                 
+000159a1  __TI_cleanup                   
+20004a98  __TI_cleanup_ptr               
+00014ccd  __TI_closefile                 
+000150a1  __TI_decompress_lzss           
+00015ef1  __TI_decompress_none           
+000153f1  __TI_doflush                   
+20004a9c  __TI_dtors_ptr                 
+20004aa0  __TI_enable_exit_profile_output
+20004a88  __TI_ft_end                    
+ffffffff  __TI_pprof_out_hndl            
+ffffffff  __TI_prof_data_size            
+ffffffff  __TI_prof_data_start           
+00015489  __TI_rd_ok                     
+000159d5  __TI_readmsg                   
+00011d8d  __TI_scanfi                    
+00000000  __TI_static_base__             
+20003140  __TI_tmpnams                   
+0001588d  __TI_writemsg                  
+000151d1  __TI_wrt_ok                    
+00015eff  __TI_zero_init                 
+00014b45  __aeabi_cdcmpeq                
+00014b45  __aeabi_cdcmple                
+00014bcb  __aeabi_cdrcmple               
+00014e21  __aeabi_d2f                    
+000155f5  __aeabi_d2iz                   
+00014d41  __aeabi_d2lz                   
+00015795  __aeabi_d2uiz                  
+000136eb  __aeabi_dadd                   
+00013b75  __aeabi_ddiv                   
+0001433d  __aeabi_dmul                   
+000136e1  __aeabi_dsub                   
+00015f31  __aeabi_errno_addr             
+00015ad5  __aeabi_i2d                    
+00014ab7  __aeabi_idiv0                  
+000157d9  __aeabi_l2d                    
+00014ab7  __aeabi_ldiv0                  
+00014e8f  __aeabi_ldivmod                
+00015d93  __aeabi_lmul                   
+00014c51  __aeabi_memclr                 
+00014c51  __aeabi_memclr4                
+00014c51  __aeabi_memclr8                
+00014985  __aeabi_memcpy                 
+00014985  __aeabi_memcpy4                
+00014985  __aeabi_memcpy8                
+00014c53  __aeabi_memset                 
+00014c53  __aeabi_memset4                
+00014c53  __aeabi_memset8                
+20004a94  __aeabi_stderr                 
+20004a8c  __aeabi_stdin                  
+20004a90  __aeabi_stdout                 
+00015d25  __aeabi_ui2d                   
+00014a21  __aeabi_uldivmod               
+ffffffff  __binit__                      
+ffffffff  __c_args__                     
+UNDEFED   __mpu_init                     
+20003298  __stack                        
+20000000  __start___llvm_prf_cnts        
+20000000  __stop___llvm_prf_cnts         
+00015a09  _c_int00_noargs                
+0001dffd  _ctypes_                       
+20004970  _device                        
+20004880  _ftable                        
+20004aa4  _lock                          
+00013897  _nop                           
+200049e8  _stream                        
+20004ac8  _sys_memory                    
+UNDEFED   _system_post_cinit             
+00015f4f  _system_pre_init               
+20004aa8  _unlock                        
+00015f53  abort                          
+0001423d  aligned_alloc                  
+0001543d  atoi                           
+ffffffff  binit                          
+000158c5  calloc                         
+00015295  close                          
+00015d61  copysign                       
+00015d61  copysignl                      
+20004ab4  errno                          
+00012aef  ethernet_init                  
+00015565  exit                           
+00015b05  fclose                         
+00015aa5  finddevice                     
+000148e9  fopen                          
+00014ab9  fputc                          
+00014439  fread                          
+00014531  free                           
+00015109  fseek                          
+0001516d  ftell                          
+00013899  fwrite                         
+00000000  g_pfnVectors                   
+2000326c  g_ui32SysClock                 
+00012b4f  get_macid                      
+00015751  getdevice                      
+000128a1  gpio_init                      
+0001401d  ldexp                          
+0001401d  ldexpl                         
+00015bdd  lseek                          
+00012cbd  main                           
+00015f41  malloc                         
+0001423d  memalign                       
+00015d05  memchr                         
+00015c7d  memcmp                         
+00014985  memcpy                         
+00015c05  memmove                        
+00014c59  memset                         
+00008d75  mg_alloc_conn                  
+00008cfb  mg_aton                        
+00000431  mg_base64_decode               
+000003ad  mg_base64_encode               
+0000035d  mg_base64_final                
+000002a5  mg_base64_update               
+000103c7  mg_bzero                       
+00000ef1  mg_call                        
+0000ef71  mg_casecmp                     
+00010673  mg_check_ip_acl                
+00008db1  mg_close_conn                  
+00008e67  mg_connect                     
+0000b9d9  mg_connect_resolved            
+0001052b  mg_crc32                       
+00000561  mg_device_reset                
+0000085b  mg_dns_parse                   
+0000075d  mg_dns_parse_rr                
+00000f2b  mg_error                       
+00001ff5  mg_file_printf                 
+00001ee5  mg_file_read                   
+00001f63  mg_file_write                  
+0000053d  mg_flash_bank                  
+00000541  mg_flash_erase                 
+00000575  mg_flash_load                  
+00000563  mg_flash_save                  
+00000535  mg_flash_sector_size           
+00000531  mg_flash_size                  
+0000052d  mg_flash_start                 
+0000054d  mg_flash_swap_bank             
+00000551  mg_flash_write                 
+00000539  mg_flash_write_align           
+00001ec7  mg_fs_close                    
+0000207f  mg_fs_ls                       
+00001e81  mg_fs_open                     
+20004a38  mg_fs_posix                    
+00005353  mg_hello                       
+000067cd  mg_hexdump                     
+0000e9c7  mg_hmac_sha256                 
+000027d9  mg_http_bauth                  
+0000539b  mg_http_connect                
+00004769  mg_http_creds                  
+00003ad3  mg_http_etag                   
+00002c1f  mg_http_get_header             
+000048f1  mg_http_get_header_var         
+00002ba1  mg_http_get_request_len        
+0000297f  mg_http_get_var                
+000053c9  mg_http_listen                 
+000025df  mg_http_next_multipart         
+00002f3d  mg_http_parse                  
+0000323f  mg_http_printf_chunk           
+00003a0d  mg_http_reply                  
+000045af  mg_http_serve_dir              
+00003dd5  mg_http_serve_file             
+0000eed3  mg_http_serve_ssi              
+00004c03  mg_http_status                 
+00004a29  mg_http_upload                 
+000028f3  mg_http_var                    
+00003269  mg_http_write_chunk            
+00009121  mg_io_recv                     
+0000a721  mg_io_send                     
+0000557d  mg_iobuf_add                   
+00005621  mg_iobuf_del                   
+000056a3  mg_iobuf_free                  
+00005521  mg_iobuf_init                  
+0000543d  mg_iobuf_resize                
+00005c57  mg_json_get                    
+0000651d  mg_json_get_b64                
+00006329  mg_json_get_bool               
+00006599  mg_json_get_hex                
+0000665b  mg_json_get_long               
+000062ab  mg_json_get_num                
+00006499  mg_json_get_str                
+00006255  mg_json_get_tok                
+00005a3d  mg_json_next                   
+000063a3  mg_json_unescape               
+00008f57  mg_listen                      
+0000677d  mg_log                         
+20004a60  mg_log_level                   
+000066f7  mg_log_prefix                  
+0000669b  mg_log_set_fn                  
+0000f17d  mg_match                       
+000076f9  mg_md5_final                   
+00006945  mg_md5_init                    
+00007601  mg_md5_update                  
+00009171  mg_mgr_free                    
+000091f5  mg_mgr_init                    
+0000bd49  mg_mgr_poll                    
+000129bd  mg_millis                      
+0000c18f  mg_mprintf                     
+000087b1  mg_mqtt_connect                
+0000873f  mg_mqtt_disconnect             
+000087f9  mg_mqtt_listen                 
+00007e4b  mg_mqtt_login                  
+00007c9d  mg_mqtt_next_prop              
+000082e5  mg_mqtt_parse                  
+0000871b  mg_mqtt_ping                   
+0000872d  mg_mqtt_pong                   
+000080a1  mg_mqtt_pub                    
+000077b9  mg_mqtt_send_header            
+00008203  mg_mqtt_sub                    
+0000eaa3  mg_now                         
+000104b5  mg_ntohl                       
+000104ed  mg_ntohs                       
+0000bbb9  mg_open_listener               
+0000bf4b  mg_ota_begin                   
+0000bfa1  mg_ota_boot                    
+0000bf69  mg_ota_commit                  
+0000bf7d  mg_ota_crc32                   
+0000bf65  mg_ota_end                     
+0000bf6d  mg_ota_rollback                
+0000bf95  mg_ota_size                    
+0000bf71  mg_ota_status                  
+0000bf89  mg_ota_timestamp               
+0000bf57  mg_ota_write                   
+00010713  mg_path_is_sane                
+0000c0c7  mg_pfn_iobuf                   
+0000c1b7  mg_pfn_stdout                  
+0001123d  mg_phy_init                    
+000113cd  mg_phy_up                      
+0000c6b7  mg_print_base64                
+0000c707  mg_print_esc                   
+0000c629  mg_print_hex                   
+0000c2e1  mg_print_ip                    
+0000c279  mg_print_ip4                   
+0000c2ad  mg_print_ip6                   
+0000c327  mg_print_ip_port               
+0000c375  mg_print_mac                   
+000088a7  mg_printf                      
+0000c919  mg_queue_add                   
+0000c819  mg_queue_book                  
+0000c935  mg_queue_del                   
+0000c76b  mg_queue_init                  
+0000c8c1  mg_queue_next                  
+0000bff9  mg_queue_printf                
+0000bfa3  mg_queue_vprintf               
+000103f5  mg_random                      
+0001042f  mg_random_str                  
+00000e87  mg_resolve                     
+000005bb  mg_resolve_cancel              
+0000c94d  mg_rpc_add                     
+0000c9a3  mg_rpc_del                     
+0000cca1  mg_rpc_err                     
+0000cd8d  mg_rpc_list                    
+0000cbb1  mg_rpc_ok                      
+0000ca67  mg_rpc_process                 
+0000cbe1  mg_rpc_verr                    
+0000cb29  mg_rpc_vok                     
+0000bea5  mg_send                        
+0000e3c5  mg_sha1_final                  
+0000e2db  mg_sha1_init                   
+0000e311  mg_sha1_update                 
+0000e7a1  mg_sha256_final                
+0000e49d  mg_sha256_init                 
+0000e70f  mg_sha256_update               
+0000c131  mg_snprintf                    
+0000ee91  mg_sntp_connect                
+0000eb09  mg_sntp_parse                  
+0000ed9d  mg_sntp_request                
+0000f30f  mg_span                        
+0000ef11  mg_str_n                       
+0000eeeb  mg_str_s                       
+0000f397  mg_str_to_num                  
+0000f0ed  mg_strcasecmp                  
+0000f05d  mg_strcmp                      
+0000efdb  mg_strdup                      
+20004a78  mg_tcpip_driver_tm4c           
+0000b8e9  mg_tcpip_free                  
+0000b78d  mg_tcpip_init                  
+0000b731  mg_tcpip_qwrite                
+000090c9  mg_timer_add                   
+0000f79d  mg_timer_expired               
+0000f769  mg_timer_free                  
+0000f71b  mg_timer_init                  
+0000f845  mg_timer_poll                  
+0000f96d  mg_tls_ctx_free                
+0000f963  mg_tls_ctx_init                
+0000f909  mg_tls_free                    
+0000f8ff  mg_tls_handshake               
+0000f8ef  mg_tls_init                    
+0000f957  mg_tls_pending                 
+0000f913  mg_tls_recv                    
+0000f935  mg_tls_send                    
+0000ffa9  mg_tls_x25519                  
+000024a9  mg_to_size_t                   
+000147e3  mg_unlist                      
+000147f5  mg_unpack                      
+000020b7  mg_unpacked                    
+00002a85  mg_url_decode                  
+000046b1  mg_url_encode                  
+000101ed  mg_url_host                    
+000100bf  mg_url_is_ssl                  
+0001037f  mg_url_pass                    
+00010263  mg_url_port                    
+00010241  mg_url_uri                     
+00010327  mg_url_user                    
+0000c161  mg_vmprintf                    
+0000884d  mg_vprintf                     
+0000c0ef  mg_vsnprintf                   
+00001855  mg_vxprintf                    
+0000906d  mg_wrapfd                      
+00010f41  mg_ws_connect                  
+000107bb  mg_ws_printf                   
+00010bb5  mg_ws_send                     
+00010fe5  mg_ws_upgrade                  
+00010781  mg_ws_vprintf                  
+000110a3  mg_ws_wrap                     
+00001809  mg_xprintf                     
+000146f1  open                           
+20003278  parmbuf                        
+20003280  pui8MACAddr                    
+00014ab9  putc                           
+00015f0d  putchar                        
+00015a3d  rand                           
+00015c2d  read                           
+00015b5d  remove                         
+000155ad  rename                         
+0001401d  scalbn                         
+0001401d  scalbnl                        
+00014615  setvbuf                        
+00015ca1  srand                          
+000158fd  sscanf                         
+00015e1d  strchr                         
+00015dab  strcmp                         
+00015e5d  strcpy                         
+00015e71  strlen                         
+00015b31  strncmp                        
+00015935  strncpy                        
+00015dc3  strrchr                        
+00015a71  strstr                         
+00012ea5  strtod                         
+00013ddd  strtol                         
+00012ea5  strtold                        
+00013505  strtoll                        
+0001412d  strtoul                        
+00013a19  strtoull                       
+00012959  uart_init                      
+20003288  ui32SysClock                   
+2000328c  ui32User0                      
+20003290  ui32User1                      
+20003294  ui8PHYAddr                     
+00015b5d  unlink                         
+00015c55  write                          
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                           
+-------   ----                           
+00000000  __TI_static_base__             
+00000000  g_pfnVectors                   
+00000010  __SYSMEM_SIZE                  
+000002a5  mg_base64_update               
+0000035d  mg_base64_final                
+000003ad  mg_base64_encode               
+00000431  mg_base64_decode               
+0000052d  mg_flash_start                 
+00000531  mg_flash_size                  
+00000535  mg_flash_sector_size           
+00000539  mg_flash_write_align           
+0000053d  mg_flash_bank                  
+00000541  mg_flash_erase                 
+0000054d  mg_flash_swap_bank             
+00000551  mg_flash_write                 
+00000561  mg_device_reset                
+00000563  mg_flash_save                  
+00000575  mg_flash_load                  
+000005bb  mg_resolve_cancel              
+0000075d  mg_dns_parse_rr                
+0000085b  mg_dns_parse                   
+00000e87  mg_resolve                     
+00000ef1  mg_call                        
+00000f2b  mg_error                       
+00001400  __STACK_SIZE                   
+00001809  mg_xprintf                     
+00001855  mg_vxprintf                    
+00001e81  mg_fs_open                     
+00001ec7  mg_fs_close                    
+00001ee5  mg_file_read                   
+00001f63  mg_file_write                  
+00001ff5  mg_file_printf                 
+0000207f  mg_fs_ls                       
+000020b7  mg_unpacked                    
+000024a9  mg_to_size_t                   
+000025df  mg_http_next_multipart         
+000027d9  mg_http_bauth                  
+000028f3  mg_http_var                    
+0000297f  mg_http_get_var                
+00002a85  mg_url_decode                  
+00002ba1  mg_http_get_request_len        
+00002c1f  mg_http_get_header             
+00002f3d  mg_http_parse                  
+0000323f  mg_http_printf_chunk           
+00003269  mg_http_write_chunk            
+00003a0d  mg_http_reply                  
+00003ad3  mg_http_etag                   
+00003dd5  mg_http_serve_file             
+000045af  mg_http_serve_dir              
+000046b1  mg_url_encode                  
+00004769  mg_http_creds                  
+000048f1  mg_http_get_header_var         
+00004a29  mg_http_upload                 
+00004c03  mg_http_status                 
+00005353  mg_hello                       
+0000539b  mg_http_connect                
+000053c9  mg_http_listen                 
+0000543d  mg_iobuf_resize                
+00005521  mg_iobuf_init                  
+0000557d  mg_iobuf_add                   
+00005621  mg_iobuf_del                   
+000056a3  mg_iobuf_free                  
+00005a3d  mg_json_next                   
+00005c57  mg_json_get                    
+00006255  mg_json_get_tok                
+000062ab  mg_json_get_num                
+00006329  mg_json_get_bool               
+000063a3  mg_json_unescape               
+00006499  mg_json_get_str                
+0000651d  mg_json_get_b64                
+00006599  mg_json_get_hex                
+0000665b  mg_json_get_long               
+0000669b  mg_log_set_fn                  
+000066f7  mg_log_prefix                  
+0000677d  mg_log                         
+000067cd  mg_hexdump                     
+00006945  mg_md5_init                    
+00007601  mg_md5_update                  
+000076f9  mg_md5_final                   
+000077b9  mg_mqtt_send_header            
+00007c9d  mg_mqtt_next_prop              
+00007e4b  mg_mqtt_login                  
+000080a1  mg_mqtt_pub                    
+00008203  mg_mqtt_sub                    
+000082e5  mg_mqtt_parse                  
+0000871b  mg_mqtt_ping                   
+0000872d  mg_mqtt_pong                   
+0000873f  mg_mqtt_disconnect             
+000087b1  mg_mqtt_connect                
+000087f9  mg_mqtt_listen                 
+0000884d  mg_vprintf                     
+000088a7  mg_printf                      
+00008cfb  mg_aton                        
+00008d75  mg_alloc_conn                  
+00008db1  mg_close_conn                  
+00008e67  mg_connect                     
+00008f57  mg_listen                      
+0000906d  mg_wrapfd                      
+000090c9  mg_timer_add                   
+00009121  mg_io_recv                     
+00009171  mg_mgr_free                    
+000091f5  mg_mgr_init                    
+0000a721  mg_io_send                     
+0000b731  mg_tcpip_qwrite                
+0000b78d  mg_tcpip_init                  
+0000b8e9  mg_tcpip_free                  
+0000b9d9  mg_connect_resolved            
+0000bbb9  mg_open_listener               
+0000bd49  mg_mgr_poll                    
+0000bea5  mg_send                        
+0000bf4b  mg_ota_begin                   
+0000bf57  mg_ota_write                   
+0000bf65  mg_ota_end                     
+0000bf69  mg_ota_commit                  
+0000bf6d  mg_ota_rollback                
+0000bf71  mg_ota_status                  
+0000bf7d  mg_ota_crc32                   
+0000bf89  mg_ota_timestamp               
+0000bf95  mg_ota_size                    
+0000bfa1  mg_ota_boot                    
+0000bfa3  mg_queue_vprintf               
+0000bff9  mg_queue_printf                
+0000c0c7  mg_pfn_iobuf                   
+0000c0ef  mg_vsnprintf                   
+0000c131  mg_snprintf                    
+0000c161  mg_vmprintf                    
+0000c18f  mg_mprintf                     
+0000c1b7  mg_pfn_stdout                  
+0000c279  mg_print_ip4                   
+0000c2ad  mg_print_ip6                   
+0000c2e1  mg_print_ip                    
+0000c327  mg_print_ip_port               
+0000c375  mg_print_mac                   
+0000c629  mg_print_hex                   
+0000c6b7  mg_print_base64                
+0000c707  mg_print_esc                   
+0000c76b  mg_queue_init                  
+0000c819  mg_queue_book                  
+0000c8c1  mg_queue_next                  
+0000c919  mg_queue_add                   
+0000c935  mg_queue_del                   
+0000c94d  mg_rpc_add                     
+0000c9a3  mg_rpc_del                     
+0000ca67  mg_rpc_process                 
+0000cb29  mg_rpc_vok                     
+0000cbb1  mg_rpc_ok                      
+0000cbe1  mg_rpc_verr                    
+0000cca1  mg_rpc_err                     
+0000cd8d  mg_rpc_list                    
+0000e2db  mg_sha1_init                   
+0000e311  mg_sha1_update                 
+0000e3c5  mg_sha1_final                  
+0000e49d  mg_sha256_init                 
+0000e70f  mg_sha256_update               
+0000e7a1  mg_sha256_final                
+0000e9c7  mg_hmac_sha256                 
+0000eaa3  mg_now                         
+0000eb09  mg_sntp_parse                  
+0000ed9d  mg_sntp_request                
+0000ee91  mg_sntp_connect                
+0000eed3  mg_http_serve_ssi              
+0000eeeb  mg_str_s                       
+0000ef11  mg_str_n                       
+0000ef71  mg_casecmp                     
+0000efdb  mg_strdup                      
+0000f05d  mg_strcmp                      
+0000f0ed  mg_strcasecmp                  
+0000f17d  mg_match                       
+0000f30f  mg_span                        
+0000f397  mg_str_to_num                  
+0000f71b  mg_timer_init                  
+0000f769  mg_timer_free                  
+0000f79d  mg_timer_expired               
+0000f845  mg_timer_poll                  
+0000f8ef  mg_tls_init                    
+0000f8ff  mg_tls_handshake               
+0000f909  mg_tls_free                    
+0000f913  mg_tls_recv                    
+0000f935  mg_tls_send                    
+0000f957  mg_tls_pending                 
+0000f963  mg_tls_ctx_init                
+0000f96d  mg_tls_ctx_free                
+0000ffa9  mg_tls_x25519                  
+000100bf  mg_url_is_ssl                  
+000101ed  mg_url_host                    
+00010241  mg_url_uri                     
+00010263  mg_url_port                    
+00010327  mg_url_user                    
+0001037f  mg_url_pass                    
+000103c7  mg_bzero                       
+000103f5  mg_random                      
+0001042f  mg_random_str                  
+000104b5  mg_ntohl                       
+000104ed  mg_ntohs                       
+0001052b  mg_crc32                       
+00010673  mg_check_ip_acl                
+00010713  mg_path_is_sane                
+00010781  mg_ws_vprintf                  
+000107bb  mg_ws_printf                   
+00010bb5  mg_ws_send                     
+00010f41  mg_ws_connect                  
+00010fe5  mg_ws_upgrade                  
+000110a3  mg_ws_wrap                     
+0001123d  mg_phy_init                    
+000113cd  mg_phy_up                      
+00011c45  EMAC0_IRQHandler               
+00011d8d  __TI_scanfi                    
+000128a1  gpio_init                      
+00012931  UARTSend                       
+00012959  uart_init                      
+000129a5  SysTick_Handler                
+000129bd  mg_millis                      
+000129c3  PinoutSet                      
+00012aef  ethernet_init                  
+00012b4f  get_macid                      
+00012cbd  main                           
+00012ea5  strtod                         
+00012ea5  strtold                        
+00013305  SysCtlClockFreqSet             
+00013505  strtoll                        
+000136e1  __aeabi_dsub                   
+000136eb  __aeabi_dadd                   
+00013897  _nop                           
+00013899  fwrite                         
+00013a19  strtoull                       
+00013b75  __aeabi_ddiv                   
+00013cab  GPIOPadConfigSet               
+00013ddd  strtol                         
+0001401d  ldexp                          
+0001401d  ldexpl                         
+0001401d  scalbn                         
+0001401d  scalbnl                        
+0001412d  strtoul                        
+0001423d  aligned_alloc                  
+0001423d  memalign                       
+0001433d  __aeabi_dmul                   
+00014439  fread                          
+00014531  free                           
+00014615  setvbuf                        
+000146f1  open                           
+000147e3  mg_unlist                      
+000147f5  mg_unpack                      
+0001484d  __TI_buff_read                 
+000148e9  fopen                          
+00014985  __aeabi_memcpy                 
+00014985  __aeabi_memcpy4                
+00014985  __aeabi_memcpy8                
+00014985  memcpy                         
+00014a21  __aeabi_uldivmod               
+00014ab7  __aeabi_idiv0                  
+00014ab7  __aeabi_ldiv0                  
+00014ab9  fputc                          
+00014ab9  putc                           
+00014b45  __aeabi_cdcmpeq                
+00014b45  __aeabi_cdcmple                
+00014bcb  __aeabi_cdrcmple               
+00014c51  __aeabi_memclr                 
+00014c51  __aeabi_memclr4                
+00014c51  __aeabi_memclr8                
+00014c53  __aeabi_memset                 
+00014c53  __aeabi_memset4                
+00014c53  __aeabi_memset8                
+00014c59  memset                         
+00014ccd  __TI_closefile                 
+00014d41  __aeabi_d2lz                   
+00014e21  __aeabi_d2f                    
+00014e8f  __aeabi_ldivmod                
+00014efd  HOSTrename                     
+00014f69  HOSTlseek                      
+00014fd1  IntEnable                      
+000150a1  __TI_decompress_lzss           
+00015109  fseek                          
+0001516d  ftell                          
+000151d1  __TI_wrt_ok                    
+00015235  HOSTopen                       
+00015295  close                          
+000152f1  HOSTread                       
+00015349  HOSTwrite                      
+000153a1  SysCtlPeripheralReset          
+000153f1  __TI_doflush                   
+0001543d  atoi                           
+00015489  __TI_rd_ok                     
+000154d5  GPIOPinConfigure               
+00015565  exit                           
+000155ad  rename                         
+000155f5  __aeabi_d2iz                   
+0001563d  UARTConfigSetExpClk            
+00015685  HOSTclose                      
+000156c9  HOSTunlink                     
+0001570d  __TI_auto_init_nobinit_nopinit 
+00015751  getdevice                      
+00015795  __aeabi_d2uiz                  
+000157d9  __aeabi_l2d                    
+00015819  EMACIntEnable                  
+00015855  SysCtlPeripheralReady          
+0001588d  __TI_writemsg                  
+000158bb  C$$IO$$                        
+000158c5  calloc                         
+000158fd  sscanf                         
+00015935  strncpy                        
+0001596d  SysCtlPeripheralEnable         
+000159a1  __TI_cleanup                   
+000159d5  __TI_readmsg                   
+00015a09  _c_int00_noargs                
+00015a3d  rand                           
+00015a71  strstr                         
+00015aa5  finddevice                     
+00015ad5  __aeabi_i2d                    
+00015b05  fclose                         
+00015b31  strncmp                        
+00015b5d  remove                         
+00015b5d  unlink                         
+00015b89  GPIODirModeSet                 
+00015bdd  lseek                          
+00015c05  memmove                        
+00015c2d  read                           
+00015c55  write                          
+00015c7d  memcmp                         
+00015ca1  srand                          
+00015cc5  UARTDisable                    
+00015d05  memchr                         
+00015d25  __aeabi_ui2d                   
+00015d61  copysign                       
+00015d61  copysignl                      
+00015d7b  GPIOPinTypeGPIOOutput          
+00015d93  __aeabi_lmul                   
+00015dab  strcmp                         
+00015dc3  strrchr                        
+00015ddb  EMACReset                      
+00015df1  EMACRxEnable                   
+00015e07  EMACTxEnable                   
+00015e1d  strchr                         
+00015e35  FlashUserGet                   
+00015e49  UARTEnable                     
+00015e5d  strcpy                         
+00015e71  strlen                         
+00015e85  GPIOPinTypeEthernetLED         
+00015e97  GPIOPinTypeGPIOInput           
+00015ea9  GPIOPinTypeUART                
+00015ebb  GPIOPinTypeUSBAnalog           
+00015ecd  GPIOPinTypeUSBDigital          
+00015ef1  __TI_decompress_none           
+00015eff  __TI_zero_init                 
+00015f0d  putchar                        
+00015f19  ResetISR                       
+00015f25  UARTCharPut                    
+00015f31  __aeabi_errno_addr             
+00015f41  malloc                         
+00015f49  GPIOPinWrite                   
+00015f4f  _system_pre_init               
+00015f53  C$$EXIT                        
+00015f53  abort                          
+0001dffd  _ctypes_                       
+0001ec7c  __TI_Handler_Table_Base        
+0001ec88  __TI_Handler_Table_Limit       
+0001ec90  __TI_CINIT_Base                
+0001eca0  __TI_CINIT_Limit               
+20000000  __start___llvm_prf_cnts        
+20000000  __stop___llvm_prf_cnts         
+20003020  __CIOBUF_                      
+20003140  __TI_tmpnams                   
+2000326c  g_ui32SysClock                 
+20003278  parmbuf                        
+20003280  pui8MACAddr                    
+20003288  ui32SysClock                   
+2000328c  ui32User0                      
+20003290  ui32User1                      
+20003294  ui8PHYAddr                     
+20003298  __stack                        
+20003498  __STACK_TOP                    
+20004698  __STACK_END                    
+20004880  _ftable                        
+20004970  _device                        
+200049e8  _stream                        
+20004a38  mg_fs_posix                    
+20004a60  mg_log_level                   
+20004a78  mg_tcpip_driver_tm4c           
+20004a88  __TI_ft_end                    
+20004a8c  __aeabi_stdin                  
+20004a90  __aeabi_stdout                 
+20004a94  __aeabi_stderr                 
+20004a98  __TI_cleanup_ptr               
+20004a9c  __TI_dtors_ptr                 
+20004aa0  __TI_enable_exit_profile_output
+20004aa4  _lock                          
+20004aa8  _unlock                        
+20004ab4  errno                          
+20004ac8  _sys_memory                    
+ffffffff  __TI_pprof_out_hndl            
+ffffffff  __TI_prof_data_size            
+ffffffff  __TI_prof_data_start           
+ffffffff  __binit__                      
+ffffffff  __c_args__                     
+ffffffff  binit                          
+UNDEFED   __mpu_init                     
+UNDEFED   _system_post_cinit             
+
+[396 symbols]

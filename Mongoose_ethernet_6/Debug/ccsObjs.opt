@@ -1,0 +1,7 @@
+"./main.obj"
+"./tm4c129encpdt_startup_ccs.obj"
+"./mongoose/mongoose.obj"
+"./mongoose/packed_fs.obj"
+"../driverlib.lib"
+"../tm4c129encpdt.cmd"
+-llibc.a
